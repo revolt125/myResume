@@ -21,17 +21,18 @@
 header {
   nav {
     width: 100%;
+    background-color: #ecededf1;
     ul {
-      padding: 2rem;
-      width: 70%;
-      display: flex;
-      list-style-type: none;
-      justify-content: space-around;
+      padding: 0.5rem;
+      // width: 70%;
+      // display: flex;
+      // list-style-type: none;
+      // justify-content: space-around;
       li {
         font-size: 1.75rem;
-        a {
-          color: black;
-          text-decoration: none;
+        margin: 0 1rem;
+        a:hover {
+          color: #73d2de !important;
         }
       }
     }
@@ -41,7 +42,7 @@ header {
 main {
   display: flex;
   flex-wrap: wrap;
-
+  margin-top: 5rem;
   section.left {
     flex: 2 1 500px;
     padding: 2rem;
@@ -136,7 +137,7 @@ main {
       }
       button {
         align-self: center;
-        background-color: #29A5B5;
+        background-color: #29a5b5;
         color: white;
         cursor: pointer;
         border: none;
@@ -146,7 +147,7 @@ main {
       }
     }
   }
-  div.line{
+  div.line {
     background-color: gray;
     width: 3px;
   }
@@ -155,8 +156,25 @@ main {
     display: flex;
     align-items: center;
     padding: 2rem;
-    div.contect{
+    div.contect {
       margin: 1rem 0;
+    }
+  }
+  section.gallery{
+    // background-color: #dbddf1;
+    padding: 80px 0;
+    img{
+      max-width: 100%;
+      background-color: #ffffff;
+      padding:15px;
+      width: 100%;
+      box-shadow: 0 0 15px rgba(0,0,0,0.3);
+      cursor: pointer;
+    }
+  }
+  #gallery-modal{
+    .modal-img{
+      width: 100%;
     }
   }
 }
@@ -171,25 +189,30 @@ footer {
 }
 
 .active {
-  color: #73d2de;
+  color: #73d2de !important;
 }
+
+.modal-dialog {
+  max-width: 90%;
+}
+
 
 @media screen and (max-width: 1120px) {
   .blueBg {
     opacity: 0.5;
   }
-  header {
-    nav {
-      ul {
-        width: 100%;
-        flex-direction: column;
-        li {
-          padding: 1rem 0rem;
-          border-bottom: 2px solid gray;
-        }
-      }
-    }
-  }
+  // header {
+  //   nav {
+  //     // ul {
+  //     //   width: 100%;
+  //     //   flex-direction: column;
+  //     //   li {
+  //     //     padding: 1rem 0rem;
+  //     //     border-bottom: 2px solid gray;
+  //     //   }
+  //     // }
+  //   }
+  // }
   main {
     section.right {
       display: flex;
@@ -222,7 +245,7 @@ footer {
         display: none;
       }
     }
-    div.line{
+    div.line {
       display: none;
     }
   }
@@ -236,6 +259,15 @@ footer {
         width: 80px;
         height: 80px;
       }
+    }
+  }
+}
+
+@media screen and (max-width: 991px) {
+  header {
+    nav {
+      width: 100%;
+      background-color: #ecededf1;      
     }
   }
 }
